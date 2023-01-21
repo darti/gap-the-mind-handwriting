@@ -7,9 +7,13 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1"
-iced = { version = "0.7", features = ["canvas", "tokio", "debug"] }
+iced = { version = "0.7", features = ["canvas"] }
 log = "0.4"
 pretty_env_logger = "0.4"
 rand = "0.8"
 getrandom = { version = "0.2", features = ["js"] }
 time = { version = "0.3", features = ["local-offset", "wasm-bindgen"] }
+
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-logger = "0.2"

@@ -802,6 +802,7 @@ dependencies = [
  "pretty_env_logger",
  "rand",
  "time",
+ "wasm-logger",
 ]
 
 [[package]]
@@ -1009,7 +1010,6 @@ checksum = "3cc3a9fd79b857228dde2a3e923a04ade4095abeda33248c6230e8c909749366"
 dependencies = [
  "futures",
  "log",
- "tokio",
  "wasm-bindgen-futures",
  "wasm-timer",
 ]
@@ -2155,18 +2155,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tokio"
-version = "1.24.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "597a12a59981d9e3c38d216785b0c37399f6e415e8d0712047620f189371b0bb"
-dependencies = [
- "autocfg",
- "num_cpus",
- "pin-project-lite",
- "windows-sys 0.42.0",
-]
-
-[[package]]
 name = "toml"
 version = "0.5.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2299,6 +2287,17 @@ name = "wasm-bindgen-shared"
 version = "0.2.83"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1c38c045535d93ec4f0b4defec448e4291638ee608530863b1e2ba115d4fff7f"
+
+[[package]]
+name = "wasm-logger"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "074649a66bb306c8f2068c9016395fa65d8e08d2affcbf95acf3c24c3ab19718"
+dependencies = [
+ "log",
+ "wasm-bindgen",
+ "web-sys",
+]
 
 [[package]]
 name = "wasm-timer"
