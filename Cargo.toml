@@ -1,0 +1,15 @@
+[package]
+name = "gap-the-mind-handwriting"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+iced = { version = "0.7", features = ["canvas", "tokio", "debug"] }
+log = "0.4"
+pretty_env_logger = "0.4"
+rand = "0.8"
+getrandom = { version = "0.2", features = ["js"] }
+time = { version = "0.3", features = ["local-offset", "wasm-bindgen"] }
